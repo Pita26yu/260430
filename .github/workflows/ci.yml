@@ -1,0 +1,15 @@
+name: CI Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 顯示測試訊息
+        run: echo "Hello! GitHub Actions 成功跑起來了～ 🎉"
