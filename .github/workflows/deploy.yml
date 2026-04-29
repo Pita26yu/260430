@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
 
-# 加上這段權限（解決 id-token: write 錯誤）
 permissions:
   contents: read
   pages: write
@@ -23,7 +22,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './20260430'     # 你的作業資料夾名稱
+          path: './20260430/dist'     # ← 改成 dist 資料夾
 
       - name: Deploy
         id: deployment
